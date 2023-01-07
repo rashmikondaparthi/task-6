@@ -1,4 +1,6 @@
-
+"use strict";
+const { Model, Op } = require("sequelize");
+module.exports = (sequelize, DataTypes) => {
   class Todo extends Model {
     /**
      * Helper method for defining associations.
