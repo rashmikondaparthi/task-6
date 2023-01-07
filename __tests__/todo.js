@@ -117,7 +117,7 @@ describe("Todo test suite", () => {
     const agent = request.agent(server);
 
     let x1 = await agent.get("/signup");
-    let csrfToken = extractCsrfToken(x1);
+    let csrfToken = extractCsrfToken(x1);  
 
     await agent.post("/users").send({
       firstName: "Test",
@@ -178,13 +178,13 @@ describe("Todo test suite", () => {
       .get("/todos")
       .set("Accept", "application/json");
 
-    const parsedGroupedResponse = JSON.parse(groupedTodosResponse.text);
-    const dueTodayCount = parsedGroupedResponse.duetodaytodos.length;
-    const latestTodo = parsedGroupedResponse.duetodaytodos[dueTodayCount - 1];
+      const parsedGroupedResponse = JSON.parse(groupedTodosResponse.text);
+      const dueTodayCount = parsedGroupedResponse.duetodaytodos.length;
+      const latestTodo = parsedGroupedResponse.duetodaytodos[dueTodayCount - 1];
 
     await agent.get("/signout");
 
-    await login(agent, "test-b@test.com", "123456789");
+    await login(agent, "test-b@test.com", "123456789"); 
 
     res = await agent.get("/todos");
     csrfToken = extractCsrfToken(res);
@@ -240,7 +240,7 @@ describe("Todo test suite", () => {
     console.log(deletestatus);
 
     deletestatus
-      ? expect(deletestatus).toBe(true)
-      : expect(deletestatus).toBe(false);
-  });
+    ? expect(deletestatus).toBe(true)
+    : expect(deletestatus).toBe(false);
+}); 
 });
