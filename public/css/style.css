@@ -1,11 +1,8 @@
 body {
-  color: black;
-  font-family: sans-serif;
-}
+    font-family: monospace;
+    background: #800000;
+  }
 
-.Todo-Item:hover .trash-icon {
-  display: block;
-}
-h5 {
-  display: inline;
-}
+  .todoItem:hover .trashIcone {
+    display: block;
+  }
