@@ -1,2 +1,3 @@
-console.log("JOHN");
+console.log("Todo application");
+
 
